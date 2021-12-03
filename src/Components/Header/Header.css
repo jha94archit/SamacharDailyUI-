@@ -13,7 +13,14 @@
 .header-links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-left: 8px;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .header-opts {
@@ -30,6 +37,10 @@
 @media only screen and (min-width: 600px) {
   .header-container {
     flex-direction: column;
+  }
+
+  .header-links {
+    margin-left: 32px;
   }
 }
 

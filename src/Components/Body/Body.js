@@ -1,15 +1,17 @@
-import React from 'react'
+import React , { useContext } from 'react'
 import NewsCard from '../NewsCard/NewsCard'
 import './Body.css'
+import { NewsContext } from '../../Api/Context'
 
 function Body() {
+    const {news} = useContext(NewsContext)
     return (
         <div className="body-container">
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
+            {
+                news.map((item, idx) => {
+                    return <NewsCard item={item} />
+                })
+            }
         </div>
     )
 }
